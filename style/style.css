@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=TT+Lakes:wght@400;500;700&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'TT Lakes', sans-serif;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+  height: 100vh;
+  background-color: #fff;
+  overflow-y: auto;
+  padding: 16px;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+  }
+
+  &__btn-close,
+  &__btn-search {
+    width: 24px;
+    height: 24px;
+    background: url('../icons/close.svg') no-repeat center;
+    border: none;
+    cursor: pointer;
+
+    &--search {
+      background: url('../icons/search.svg') no-repeat center;
+    }
+  }
+
+  &__logo {
+    width: 100px;
+  }
+
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex-grow: 1;
+  }
+
+  &__item {
+    margin-bottom: 16px;
+
+    a {
+      text-decoration: none;
+      color: #1b1c21;
+      font-size: 16px;
+    }
+  }
+
+  &__footer {
+    margin-top: auto;
+  }
+
+  &__actions {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+
+  &__icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    background: #ff3e79 no-repeat center;
+  }
+
+  &__email {
+    display: block;
+    color: #1b1c21;
+    margin-bottom: 8px;
+  }
+
+  &__phone {
+    display: block;
+    color: #1b1c21;
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 16px;
+  }
+
+  &__lang {
+    display: flex;
+    gap: 8px;
+
+    &-btn {
+      border: none;
+      background: none;
+      font-size: 14px;
+      cursor: pointer;
+      color: #1b1c21;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .menu {
+    width: 400px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .menu {
+    width: 480px;
+  }
+}
