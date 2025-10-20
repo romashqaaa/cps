@@ -92,7 +92,7 @@ body {
     gap: 8px;
     overflow-x: auto;
     padding: 8px 0;
-    margin-bottom: 16px;
+    margin-bottom: 24px;
     -ms-overflow-style: none;
     scrollbar-width: none;
 }
@@ -123,4 +123,94 @@ body {
 .service-tab:hover {
     background: #FFFFFF;
     color: #1B1C21;
+}
+
+.content-section {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.text-content {
+    flex: 1;
+}
+
+.main-text {
+    font-size: 14px;
+    line-height: 18px;
+    color: #1B1C21;
+    margin: 0 0 16px 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.read-more-btn {
+    display: flex;
+    align-items: center;
+    background: none;
+    border: none;
+    font-size: 16px;
+    font-weight: 500;
+    color: #1B1C21;
+    cursor: pointer;
+    padding: 0;
+    gap: 8px;
+}
+
+.read-more-btn::before {
+    content: '';
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url('../img/expand.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.image-content {
+    flex: 1;
+    text-align: center;
+}
+
+.content-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+}
+
+/* Десктопная версия */
+@media (min-width: 768px) {
+    .content-section {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 36px;
+    }
+    
+    .main-text {
+        font-size: 16px;
+        line-height: 20px;
+        -webkit-line-clamp: 6;
+    }
+    
+    .image-content {
+        max-width: 50%;
+    }
+}
+
+@media (min-width: 1120px) {
+    .services-section {
+        padding: 0 32px;
+    }
+    
+    .page-header {
+        padding: 24px 32px;
+    }
+    
+    .main-text {
+        font-size: 18px;
+        line-height: 24px;
+    }
 }
